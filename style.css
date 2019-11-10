@@ -63,7 +63,7 @@ h1{
 }
 .loginbox input[type="submit"]:hover{
     cursor:pointer;
-    background:rgb(6, 252, 39);
+    background:rgb(6, 252, 240);
     color: #000;
 }
 .loginbox a{
