@@ -1,8 +1,3 @@
-<?php
-
-include("connection.php");
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,36 +25,42 @@ include("connection.php");
 <br>
 <a href="#">forgot password</a>
 <br>
-<a href="#">Create an account</a><br>
+<a href="http://localhost:8080/qbl/qbl/signup.php">Create an account</a><br>
 </form>
 </div>
 
 
 <?php
+include("connection.php");
 
-$uname=$_POST["uname"];
-$upass=$_POST["upass"];
-$submit=$_POST["submit"];
-
-
-if($uname!="" && $upass!="")
+if($_POST['submit'])
 {
-    $query="INSERT INTO user_login VALUES('$uname','$upass')";
-    $done=mysqli_query($conn,$query);
 
-    if($done)
+    $uname=$_POST['uname'];
+    $upass=$_POST['upass'];
+   
+    if($uname!="" && $upass!="")
     {
-    echo "<br>data inserted succesfully";
-    }
-    else{
-        echo "error";
-    }
-    
-}
-else
-{
-    echo "<br>please fill the fileds";
-}
+    $sql = "SELECT * FROM LOGIN WHERE 'username' = '$uname' AND 'password' = '$upass' ";
+      $result = mysqli_query($conn,$sql);
+     
+      if ($result)
+       {
+           header("location:test.php");
+           echo "logged in";
+
+       }
+       else
+       {
+           echo "failed";
+       }
+        }
+        else
+        {
+            echo "please fill the fields";
+        }
+   
+        }
 
 
 ?>
