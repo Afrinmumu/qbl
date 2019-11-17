@@ -30,7 +30,7 @@ mysql_select_db("qbl");
 
 echo"Your File Successfully Uploaded";
 
-mysql_query("INSERT INTO gravator VALUES ('', '$path')");
+mysql_query("INSERT INTO GRAVATOR VALUES ('$path')");
 
 }
 
@@ -58,4 +58,5 @@ echo "The file cant moved to target directory.";
 
 <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
 
-</label></form>
+</label>
+</form>
