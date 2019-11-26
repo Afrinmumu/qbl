@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
@@ -16,6 +16,7 @@
 
         })
         </script>
+        <link rel="stylesheet" type="text/css" href="css/style2.css">
      
 </head>
 <body>
