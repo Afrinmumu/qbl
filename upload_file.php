@@ -60,3 +60,8 @@ echo "The file cant moved to target directory.";
 
 </label>
 </form>
+<form action="upload_file.php" method ="Post">
+
+<a href="http://localhost:8080/qbl/qbl/logout.php">Logout</a>
+</form>
+    

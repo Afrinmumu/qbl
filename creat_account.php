@@ -46,7 +46,7 @@ if($_POST['submit'])
      
       if ($result)
        {
-           header("location:test.php");
+           header("location:upload_file.php");
            echo "logged in";
 
        }
