@@ -101,7 +101,7 @@ h1
     <li><a href="http://localhost:8080/qbl/qbl/homepage.php">Home</a></li> 
     <li><a href="#">Course</a></li> 
     <li><a href="#">Resource</a></li> 
-    <li><a href="#">Book</a></li> 
+    <li><a href="http://localhost:8080/qbl/qbl/book.php">Book</a></li> 
     <li><a href="http://localhost:8080/qbl/qbl/creat_account.php">Upload</a></li> 
     </ul>
     </header>
