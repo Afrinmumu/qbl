@@ -1,129 +1,227 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <style>
-    body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+  <meta charset="utf-8">
+  <title>Question Bank & Library</title>
 
-/* Button used to open the contact form - fixed at the bottom of the page */
-.open-button {
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  top: 120px;
-  right: 600px;
-  width: 100px;
-}
-.btn cancel
-{
+  <meta ne="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-}
-h1
-{
-  position:center;
-  top: 80px;
-  left: 600px;
-  width: 400px;
-}
-/* The popup form - hidden by default */
-.form-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-}
-
-/* Add styles to the form container */
-.form-container {
-  max-width: 700px;
-  padding: 100px;
-  background-color: white;
-}
-
-
-
-
-/* Set a style for the submit/login button */
-.form-container .btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
-  right: 600px;
-}
-
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: red;
-  right: 600px;
-}
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
-}
-</style>
-    <title>qbl</title>
-    
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-
-    <script type="text/javascript">
-    $(document).ready(function(){
-            $('.menu').click(function(){
-              $('.ul').menuClass('active');  
-
-            })
-
-        })
-        </script>
-<link rel="stylesheet" type="text/css" href="css/style2.css">
-     
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/venobox.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-    <section>
-    <header>
-    <a href="#" class="uap"><img src="photos/uap.png" width="120" height="110"></a>
-    <a href="#" class="menu">Menu</a>
-    <ul class="">
-    <li><a href="http://localhost:8080/qbl/qbl/homepage.php">Home</a></li> 
-    <li><a href="#">Course</a></li> 
-    <li><a href="#">Resource</a></li> 
-    <li><a href="http://localhost:8080/qbl/qbl/book.php">Book</a></li> 
-    <li><a href="http://localhost:8080/qbl/qbl/creat_account.php">Upload</a></li> 
-    </ul>
-    </header>
-   
- <button class="open-button" onclick="openForm()">Click here</button>
 
-<div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
+
+<body>
    
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
+   <nav class="navbar navbar-expand-md  navbar-light">
+<div class="container">
+  <a class="navbar-brand" href="#" > <img src="img/uap.png" alt="" height="60px" width="80px"> </h3>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav  ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#home">Home</a>
+      </li>
+      <li class="nav-item dropdown active">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Courses
+      </a>
+      <div class="dropdown-menu">
+         <a class="dropdown-item" href="question/1.html">1-1</a>
+        <a class="dropdown-item" href="question/1.html">1-2</a>
+        <a class="dropdown-item" href="question/1.html">2-1</a>
+        <a class="dropdown-item" href="question/1.html">2-2</a>
+        <a class="dropdown-item" href="question/1.html">3-1</a>
+        <a class="dropdown-item" href="question/1.html">3-2</a>
+        <a class="dropdown-item" href="question/1.html">4-1</a>
+        <a class="dropdown-item" href="question/1.html">4-2</a>
+      </div>
+    </li>   
+    <li class="nav-item dropdown active">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Books
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="books/1.html">1-1</a>
+        <a class="dropdown-item" href="books/1.html">1-2</a>
+        <a class="dropdown-item" href="books/1.html">2-1</a>
+        <a class="dropdown-item" href="books/1.html">2-2</a>
+        <a class="dropdown-item" href="books/1.html">3-1</a>
+        <a class="dropdown-item" href="books/1.html">3-2</a>
+        <a class="dropdown-item" href="books/1.html">4-1</a>
+        <a class="dropdown-item" href="books/1.html">4-2</a>
+      </div>
+    </li>   
+
+    <li class="nav-item active">
+        <a class="nav-link" href="resources.html">Resources</a>
+      </li> 
+    </li>   
+      <li class="nav-item active">
+        <a class="nav-link" href="signup.php">Upload</a>
+      </li> 
+
+    </ul>
+  </div> 
+  </div> 
+</nav>
+
+ 
+<section id="home">
+  <div class="home-top">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="back-img">
+       <img src="img/home.jpg" alt=""  width="100%">
+          <div class="search-bar">
+          <form action="#" method="post" class="search-bottom-wthree d-flex">
+            <input class="search" type="search" placeholder="Search Here..." required="">
+            <button class="btn" type="submit">
+              <span class="fa fa-search"></span>
+          </button>
+          </form>
+          
+        </div>
+
+
+        </div>
+      
+    </div>
+  </div>  
+</section>
+
+<div id="about">
+        <div class="container">
+        <div class="title text-center">
+          <h2>The website is devoloped by</h2>
+        </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="img2">
+                <img src="img/sad.jpg" alt=""  height="320px" width="100%">
+              </div>
+              <div class="description">
+                <h4>Mst. Sadia Afrin</h4>
+                <h5>Registration: 16201064</h5>
+
+              </div>
+               <div class="logo">
+              <span class="f1 text-center">
+                <a href="https://www.facebook.com/profile.php?id=100010104574625">
+                  <span class="fa fa-facebook"></span>
+                </a>
+              </span>
+                <span class="f2 text-center">
+                <a href="#">
+                  <span class="fa fa-twitter"></span>
+                </a>
+              </span>
+              <span class="f3 text-center">
+                <a href="https://github.com/Afrinmumu">
+                  <span class="fa fa-github-square"></span>
+                </a>
+              </span>
+            </div>
+            </div>
+             <div class="col-md-4">
+              <div class="img2">
+                <img src="img/s.jpg" alt="" height="320px" width="100%">
+              </div>
+              <div class="description">
+                <h4>Md Sirazul Islam</h4>
+                <h5>Registration: 16201059</h5>
+
+              </div>
+                 
+
+                  <div class="logo">
+              <span class="f1 text-center">
+                <a href="https://www.facebook.com/sirazul.islam.5243">
+                  <span class="fa fa-facebook"></span>
+                </a>
+              </span>
+                <span class="f2 text-center">
+                <a href="https://twitter.com/siraz263">
+                  <span class="fa fa-twitter"></span>
+                </a>
+              </span>
+              <span class="f3 text-center">
+                <a href="https://github.com/sirazul263">
+                  <span class="fa fa-github-square"></span>
+                </a>
+              </span>
+            </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="img2">
+                <img src="img/l.jpg" alt="" height="320px" width="100%">
+              </div>
+              <div class="description">
+                <h4>Umme Salma Lucky</h4>
+                <h5>Registration: 16201058</h5>
+
+              </div>
+              <div class="logo">
+              <span class="f1 text-center">
+                <a href="https://www.facebook.com/salma.lucky.967">
+                  <span class="fa fa-facebook"></span>
+                </a>
+              </span>
+                <span class="f2 text-center">
+                <a href="#">
+                  <span class="fa fa-twitter"></span>
+                </a>
+              </span>
+              <span class="f3 text-center">
+                <a href="#">
+                  <span class="fa fa-github-square"></span>
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+         
 </div>
 
-<script>
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
 
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-</script>
-</section>
+
+
+
+
+
+
+   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+   <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/venobox.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+ <script >
+     $(document).ready(function(){
+    $('.venobox').venobox(); 
+});
+ </script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>
-</html>

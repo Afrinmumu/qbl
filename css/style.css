@@ -9,11 +9,11 @@ body{
 
 }
 .loginbox{
-    width: 320px;
-    height: 420px;
+    width: 600px;
+    height: 600px;
     background:#000;
     color: #fff;
-    top: 50%;
+    top: 40%;
     left: 50%;
     position: absolute;
     transform: translate(-50%,-50%);
@@ -75,4 +75,16 @@ h1{
 }
 .loginbox a:hover{
     color: #ffc107;
+}
+p{
+    font-size: 16px;
+}
+.sign-in{
+    padding-top: 10px;
+    padding-left: 80px;
+    padding-right: 170px;
+}
+.form-control{
+   background-color:#A9A0B2;
+
 }
