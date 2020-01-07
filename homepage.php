@@ -34,19 +34,10 @@
         <a class="nav-link" href="#home">Home</a>
       </li>
       <li class="nav-item dropdown active">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Courses
+      <a class="nav-link dropdown-toggle" href="http://localhost:8080/qbl/qbl/index1.php" id="navbardrop" >
+        Question
       </a>
-      <div class="dropdown-menu">
-         <a class="dropdown-item" href="question/1.html">1-1</a>
-        <a class="dropdown-item" href="question/1.html">1-2</a>
-        <a class="dropdown-item" href="question/1.html">2-1</a>
-        <a class="dropdown-item" href="question/1.html">2-2</a>
-        <a class="dropdown-item" href="question/1.html">3-1</a>
-        <a class="dropdown-item" href="question/1.html">3-2</a>
-        <a class="dropdown-item" href="question/1.html">4-1</a>
-        <a class="dropdown-item" href="question/1.html">4-2</a>
-      </div>
+      
     </li>   
     <li class="nav-item dropdown active">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">

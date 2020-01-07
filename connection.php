@@ -7,7 +7,7 @@ $dbname="qbl";
 $conn=mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
 if($conn)
 {
- echo "";
+ echo "connection done";
 }
 else{
     echo "connection failed";

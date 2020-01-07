@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" type="text/css" href="style.css">
     <title>Sign-in</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
 </head>
 
 <body>
@@ -46,10 +46,10 @@
 <input type="submit" name="submit" value="Login">
 <br>
 <div class="f-pass">
-<a href="#">Forgot password?</a>
+<a href="forget_password.php">Forgot password?</a>
 </div>
 <div class="c-acc">
-<a href="signup.html">Create an account</a><br>
+<a href="creat_account.php">Create an account</a><br>
 </div>
 </form>
 </div>
@@ -82,7 +82,7 @@ if($_POST['submit'])
      
       if ($result)
        {
-           header("location:upload_file.php");
+           header("location:index.php");
            echo "logged in";
 
        }
