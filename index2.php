@@ -1,3 +1,5 @@
+<?php include 'filesLogic.php';?>
+
 <html>
  <head>
   <title></title>
@@ -28,6 +30,8 @@
 
  </head>
  <body>
+
+ <body>
   <div class="container box">
    <h1 align="center">Displacement</h1>
    <br />
@@ -38,21 +42,36 @@
     <br />
     <table id="order_data" class="table table-bordered table-striped">
      <thead>
-      <tr>
-       <th>id</th>
-       <th>name</th>
-       <th>category</th>
-       <th>semester</th>
-       <th>downloads</th>
-        <th>dates</th>
-       
-      </tr>
-     </thead>
+    <th>ID</th>
+    <th>Filename</th>
+    <th>Size</th>
+    <th>category</th>
+    <th>semester</th>
+    <th>Downloads</th>
+    <th>Action</th>
+</thead>
+<tbody>
+  <?php foreach ($files as $file): ?>
+    <tr>
+      <td><?php echo $file['id']; ?></td>
+      <td><?php echo $file['name']; ?></td>
+      <td><?php echo $file['size']; ?></td>
+      <td><?php echo $file['category']; ?></td>
+      <td><?php echo $file['semester']; ?></td>
+      <td><?php echo $file['downloads']; ?></td>
+     
+      <td><a href="index2.php?file_id=<?php echo $file['id'] ?>">Download</a></td>
+    </tr>
+  <?php endforeach;?>
+
+</tbody>
+</table>
     </table>
     
    </div>
   </div>
  </body>
+</body>
 </html>
 
 

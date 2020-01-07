@@ -10,7 +10,11 @@
       <div class="row">
         <form action="index.php" method="post" enctype="multipart/form-data" >
           <h3>Upload File</h3>
-          <input type="file" name="myfile"> <br>
+          <input type="file" name="myfile">
+          <p>Category</p>
+          <input type="text" name="cname" placeholder="Enter Category">
+          <p>semester</p>
+          <input type="text" name="sname" placeholder="Enter Semester">
           <button type="submit" name="save">upload</button>
         </form>
       </div>

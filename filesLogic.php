@@ -1,10 +1,11 @@
 <?php
-
+include("index.php");
 $conn = mysqli_connect('localhost', 'root', '', 'qbl');
 
 $sql = "SELECT * FROM files";
 $result = mysqli_query($conn, $sql);
-
+$cname=$_POST['cname'];
+$sname=$_POST['sname'];
 $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
 // Uploads files
 if (isset($_POST['save'])) { 
@@ -21,7 +22,7 @@ if (isset($_POST['save'])) {
     } else {
      
         if (move_uploaded_file($file, $destination)) {
-            $sql = "INSERT INTO files (name, size, downloads) VALUES ('$filename', $size, 0)";
+            $sql = "INSERT INTO files (name,size,category,semester,downloads) VALUES ('$filename', $size,'$cname','$sname', 0)";
             if (mysqli_query($conn, $sql)) {
                 echo "File uploaded successfully";
             }

@@ -1,7 +1,7 @@
 <?php
 //fetch.php
 $connect = mysqli_connect("localhost", "root", "", "qbl");
-$columns = array('id', 'name','category','semester','downloads','date');
+$columns = array('id', 'name','size','category','semester','downloads','date');
 
 $query = "SELECT * FROM files WHERE";
 
@@ -21,15 +21,6 @@ if(isset($_POST["search"]["value"]))
  ';
 }
 
-if(isset($_POST["order"]))
-{
- $query .= 'ORDER BY '.$columns[$_POST['order']['0']['column']].' '.$_POST['order']['0']['dir'].' 
- ';
-}
-else
-{
- $query .= 'ORDER BY id ASC ';
-}
 
 $query1 = '';
 
@@ -49,10 +40,13 @@ while($row = mysqli_fetch_array($result))
  $sub_array = array();
  $sub_array[] = $row["id"];
  $sub_array[] = $row["name"];
+ $sub_array[] = $row["size"];
  $sub_array[] = $row["category"];
  $sub_array[] = $row["semester"];
  $sub_array[] = $row["downloads"];
  $sub_array[] = $row["date"];
+ $sub_array[] = $row[""];
+ 
  $data[] = $sub_array;
 }
 
