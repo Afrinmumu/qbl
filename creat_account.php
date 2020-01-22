@@ -14,14 +14,14 @@
 
 <div class="loginbox">
 <h1>Sign Up</h1>
-<form action="signup.php" method="Post">
+<form action="creat_account.php" method="Post">
 <p>Username</p>
 <input type="text" name="name" placeholder="Enter Username">
 <p>Email</p>
 <input type="text" name="email" placeholder="Enter email">
 
 <p>Password</p>
-<input type="Password" name="pass" placeholder="Enter password">
+<input type="Password" name="upass" placeholder="Enter password">
 <p>Role</p>
 <input type="text" name="role" placeholder="Enter role">
 <br>
@@ -43,8 +43,8 @@ include("connection.php");
      
       if($name!="" && $email!="" && $pass!="" && $role!="")
       {
-        $sql = "INSERT INTO Customers (username, email, password,role)
-        VALUES ('Cardinal', 'Stavanger', 'Norway','admin')";
+        $sql = "INSERT INTO login(username, email, password,role)
+        VALUES ('$name','$email','$pass','$role')";
         $result = mysqli_query($conn,$sql);
           if($result)
           {

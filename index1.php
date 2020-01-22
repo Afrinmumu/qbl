@@ -1,4 +1,4 @@
-<?php include 'filesLogic.php';?>
+
 <html>
  <head>
   <title></title>
@@ -33,28 +33,34 @@
    <h1 align="center">Displacement</h1>
    <br />
    <div class="table-responsive">
-    
+    <br />
+    <div class="row">
+     <div class="input-daterange">
+      <div class="col-md-4">
+       <input type="text" name="start_date" id="start_date" class="form-control" />
+      </div>
+      <div class="col-md-4">
+       <input type="text" name="end_date" id="end_date" class="form-control" />
+      </div>      
+     </div>
+     <div class="col-md-4">
+      <input type="button" name="search" id="search" value="Search" class="btn btn-info" />
+     </div>
     </div>
     <br />
     <table id="order_data" class="table table-bordered table-striped">
-    <thead>
-    <th>ID</th>
+     <thead>
+      <tr>
+      <th>ID</th>
     <th>Filename</th>
-    <th>size (in mb)</th>
+    <th>Size</th>
+    <th>category</th>
+    <th>semester</th>
     <th>Downloads</th>
     <th>Action</th>
-</thead>
-<tbody>
-  <?php foreach ($files as $file): ?>
-    <tr>
-      <td><?php echo $file['id']; ?></td>
-      <td><?php echo $file['name']; ?></td>
-      <td><?php echo floor($file['size'] / 1000) . ' KB'; ?></td>
-      <td><?php echo $file['downloads']; ?></td>
-      <td><a href="index1.php?file_id=<?php echo $file['id'] ?>">Download</a></td>
-    </tr>
-  <?php endforeach;?>
-
+       
+      </tr>
+     </thead>
     </table>
     
    </div>
@@ -75,7 +81,7 @@ $(document).ready(function(){
    "serverSide" : true,
    "order" : [],
    "ajax" : {
-    url:"fet.php",
+    url:"fet2.php",
     type:"POST",
     data:{
      is_date_search:is_date_search, start_date:start_date, end_date:end_date

@@ -45,7 +45,7 @@ while($row = mysqli_fetch_array($result))
  $sub_array[] = $row["semester"];
  $sub_array[] = $row["downloads"];
  $sub_array[] = $row["date"];
- $sub_array[] = $row[""];
+ 
  
  $data[] = $sub_array;
 }

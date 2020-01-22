@@ -38,8 +38,10 @@
 <input type="Password" name="upass" placeholder="Enter password">
 <p>Role</p>
   <select class="form-control" id="sel1" name="role">
-        <option>Admin</option>
+        <option>SuperAdmin</option>
         <option>Teacher</option>
+        <option>Student</option>
+        
         
   </select>
 <br>
@@ -74,10 +76,11 @@ if($_POST['submit'])
 
     $uname=$_POST['uname'];
     $upass=$_POST['upass'];
+    $role=$_POST['role'];
    
     if($uname!="" && $upass!="")
     {
-    $sql = "SELECT * FROM LOGIN WHERE 'username' = '$uname' AND 'password' = '$upass' ";
+    $sql = "SELECT * FROM LOGIN WHERE 'username' = '$uname' AND 'password' = '$upass' AND 'role' = '$role' ";
       $result = mysqli_query($conn,$sql);
      
       if ($result)
